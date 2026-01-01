@@ -2,49 +2,77 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Livro 1 – Reflexões</title>
+  <title>Livros Motivacional</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #333;
-      padding: 20px;
-      line-height: 1.6;
+      background: linear-gradient(135deg, #6a0dad, #ffffff);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    h1 {
+
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
       text-align: center;
-      color: #2c3e50;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
-    p {
-      margin-bottom: 12px;
+
+    h1 {
+      color: #6a0dad;
+      margin-bottom: 5px;
+    }
+
+    small {
+      color: #555;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #6a0dad;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #4e0a86;
     }
   </style>
 </head>
 <body>
 
-<h1>Livro 1 – Reflexões</h1>
+  <div class="box">
+    <h1>LIVROS MOTIVACIONAL</h1>
+    <small>ALLYSON</small>
 
-<p>1. Às vezes, o silêncio ensina mais do que mil palavras.</p>
-<p>2. Quem olha para dentro, entende melhor o mundo.</p>
-<p>3. Nem toda demora é atraso, às vezes é proteção.</p>
-<p>4. Crescer dói, mas permanecer igual dói ainda mais.</p>
-<p>5. A pressa rouba detalhes que a calma revela.</p>
-<p>6. O tempo mostra quem é ponte e quem é parede.</p>
-<p>7. Aprender a soltar também é uma forma de amar.</p>
-<p>8. Nem tudo que pesa é ruim, alguns pesos fortalecem.</p>
-<p>9. A verdade aparece quando as máscaras caem.</p>
-<p>10. A paz começa quando a comparação termina.</p>
-<p>11. O que você alimenta dentro de si, cresce.</p>
-<p>12. Algumas respostas só chegam quando aceitamos esperar.</p>
-<p>13. Errar faz parte, desistir é que atrasa o caminho.</p>
-<p>14. O passado ensina, mas não deve morar em nós.</p>
-<p>15. A fé transforma quedas em recomeços.</p>
-<p>16. Nem todo sorriso é felicidade, nem toda dor é fraqueza.</p>
-<p>17. A maturidade nasce quando o ego diminui.</p>
-<p>18. Quem se conhece, não se perde nos outros.</p>
-<p>19. O simples também pode ser profundo.</p>
-<p>20. Todo dia é uma nova chance de ser melhor que ontem.</p>
+    <br><br>
+
+    <button onclick="acessarLivro()">Acessar Livro 1</button>
+  </div>
+
+  <script>
+    function acessarLivro() {
+      const senha = prompt("Digite a senha de acesso:");
+
+      if (senha === "livro10") {
+        window.location.href = "livro1.html";
+      } else {
+        alert("Acesso negado. Senha incorreta.");
+      }
+    }
+  </script>
 
 </body>
 </html>
