@@ -2,110 +2,44 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Livro 2 - Livros Motivacional</title>
-
+<title>Livro 2</title>
 <style>
 body{
-  margin:0;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   background:#f5f0ff;
-  color:#333;
-}
-
-.bloqueio{
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
   text-align:center;
-  padding:20px;
+  padding:40px;
 }
-
 .card{
   background:white;
   padding:30px;
   border-radius:15px;
-  max-width:420px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  max-width:400px;
+  margin:auto;
 }
-
-h1{
-  color:#6a0dad;
-}
-
 button{
-  margin-top:20px;
   padding:15px 25px;
-  font-size:16px;
-  border:none;
-  border-radius:10px;
   background:#6a0dad;
   color:white;
-  cursor:pointer;
-}
-
-button:hover{
-  opacity:0.9;
-}
-
-.conteudo{
-  display:none;
-  padding:30px;
-  max-width:800px;
-  margin:auto;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- TELA BLOQUEADA -->
-<div class="bloqueio" id="bloqueio">
-  <div class="card">
-    <h1>🔒 Conteúdo Bloqueado</h1>
-    <p>Para acessar o <b>Livro 2</b>, faça o Pix abaixo:</p>
-
-    <p><b>Pix:</b><br>12991078958</p>
-    <p><b>Allyson da Silva Pantoja</b></p>
-
-    <button onclick="liberar()">✅ Já paguei</button>
-  </div>
-</div>
-
-<!-- CONTEÚDO LIBERADO -->
-<div class="conteudo" id="conteudo">
-  <h1>📘 Livro 2 – Motivação</h1>
-
-  <ol>
-    <li>Você é mais forte do que imagina.</li>
-    <li>Cada passo conta, mesmo os pequenos.</li>
-    <li>Não desista hoje, o amanhã precisa de você.</li>
-    <li>Acredite no processo, ele está funcionando.</li>
-    <li>Quem persiste, alcança.</li>
-    <li>Seu esforço de hoje é a vitória de amanhã.</li>
-    <li>Levante-se quantas vezes for necessário.</li>
-    <li>O impossível começa a ceder quando você tenta.</li>
-    <li>Seu sonho merece disciplina, não desculpas.</li>
-    <li>Continue, mesmo quando cansar.</li>
-    <li>Você não chegou até aqui por acaso.</li>
-    <li>A dor passa, o orgulho de vencer fica.</li>
-    <li>Faça com medo, mas faça.</li>
-    <li>A constância vence a motivação.</li>
-    <li>Seu foco define seu futuro.</li>
-    <li>Cada queda ensina como subir melhor.</li>
-    <li>O sucesso é construído no silêncio.</li>
-    <li>A vitória é de quem não para.</li>
-    <li>Confie em si, você consegue.</li>
-    <li>Hoje é o dia de avançar.</li>
-  </ol>
-
-  <a href="index.html">⬅ Voltar para o início</a>
+<div class="card">
+  <h1>🔒 Livro 2 Bloqueado</h1>
+  <p>Pix: <b>12991078958</b></p>
+  <p><b>Allyson da Silva Pantoja</b></p>
+  <button onclick="liberar()">Já paguei</button>
 </div>
 
 <script>
 function liberar(){
-  document.getElementById("bloqueio").style.display="none";
-  document.getElementById("conteudo").style.display="block";
+  document.body.innerHTML = "<h1>ACESSO LIBERADO ✅</h1>";
 }
 </script>
 
