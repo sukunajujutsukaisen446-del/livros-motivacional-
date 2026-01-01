@@ -1,97 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Livro 2 – Motivação</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #5b2cff, #ffffff);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+<meta charset="UTF-8">
+<title>Livro 2 - Livros Motivacional</title>
 
-    .container {
-      background: #ffffff;
-      max-width: 800px;
-      width: 90%;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f5f0ff;
+  color:#333;
+}
 
-    h1 {
-      text-align: center;
-      color: #5b2cff;
-      margin-bottom: 20px;
-    }
+.bloqueio{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
 
-    ol {
-      color: #333;
-      line-height: 1.8;
-      font-size: 17px;
-    }
+.card{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  max-width:420px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
 
-    .botoes {
-      margin-top: 30px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
+h1{
+  color:#6a0dad;
+}
 
-    .botao {
-      text-decoration: none;
-      background: #5b2cff;
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: 0.3s;
-      text-align: center;
-    }
+button{
+  margin-top:20px;
+  padding:15px 25px;
+  font-size:16px;
+  border:none;
+  border-radius:10px;
+  background:#6a0dad;
+  color:white;
+  cursor:pointer;
+}
 
-    .botao:hover {
-      background: #4320c9;
-    }
-  </style>
+button:hover{
+  opacity:0.9;
+}
+
+.conteudo{
+  display:none;
+  padding:30px;
+  max-width:800px;
+  margin:auto;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>📘 Livro 2 – Versos Motivacionais</h1>
+<!-- TELA BLOQUEADA -->
+<div class="bloqueio" id="bloqueio">
+  <div class="card">
+    <h1>🔒 Conteúdo Bloqueado</h1>
+    <p>Para acessar o <b>Livro 2</b>, faça o Pix abaixo:</p>
 
-    <ol>
-      <li>Você já provou que consegue chegar até aqui.</li>
-      <li>Persistir é um ato de coragem diária.</li>
-      <li>Nem todo progresso faz barulho.</li>
-      <li>O esforço silencioso constrói grandes vitórias.</li>
-      <li>Continue mesmo quando ninguém estiver vendo.</li>
-      <li>Disciplina cria liberdade.</li>
-      <li>Seu futuro agradece o sacrifício de hoje.</li>
-      <li>Não pare no meio do caminho.</li>
-      <li>A constância vence o talento.</li>
-      <li>Você está mais perto do que imagina.</li>
-      <li>Cada dia é uma nova chance.</li>
-      <li>Acredite: você está evoluindo.</li>
-      <li>O processo vale a pena.</li>
-      <li>Seja paciente consigo mesmo.</li>
-      <li>O impossível se rende a quem insiste.</li>
-      <li>Seu sonho precisa de ação.</li>
-      <li>Levante mais forte a cada queda.</li>
-      <li>Você nasceu para vencer.</li>
-      <li>Não recue agora.</li>
-      <li>O melhor ainda está por vir.</li>
-    </ol>
+    <p><b>Pix:</b><br>12991078958</p>
+    <p><b>Allyson da Silva Pantoja</b></p>
 
-    <div class="botoes">
-      <a class="botao" href="livro1.html">⬅ Voltar para o Livro 1</a>
-      <a class="botao" href="index.html">🏠 Página Inicial</a>
-    </div>
+    <button onclick="liberar()">✅ Já paguei</button>
   </div>
+</div>
+
+<!-- CONTEÚDO LIBERADO -->
+<div class="conteudo" id="conteudo">
+  <h1>📘 Livro 2 – Motivação</h1>
+
+  <ol>
+    <li>Você é mais forte do que imagina.</li>
+    <li>Cada passo conta, mesmo os pequenos.</li>
+    <li>Não desista hoje, o amanhã precisa de você.</li>
+    <li>Acredite no processo, ele está funcionando.</li>
+    <li>Quem persiste, alcança.</li>
+    <li>Seu esforço de hoje é a vitória de amanhã.</li>
+    <li>Levante-se quantas vezes for necessário.</li>
+    <li>O impossível começa a ceder quando você tenta.</li>
+    <li>Seu sonho merece disciplina, não desculpas.</li>
+    <li>Continue, mesmo quando cansar.</li>
+    <li>Você não chegou até aqui por acaso.</li>
+    <li>A dor passa, o orgulho de vencer fica.</li>
+    <li>Faça com medo, mas faça.</li>
+    <li>A constância vence a motivação.</li>
+    <li>Seu foco define seu futuro.</li>
+    <li>Cada queda ensina como subir melhor.</li>
+    <li>O sucesso é construído no silêncio.</li>
+    <li>A vitória é de quem não para.</li>
+    <li>Confie em si, você consegue.</li>
+    <li>Hoje é o dia de avançar.</li>
+  </ol>
+
+  <a href="index.html">⬅ Voltar para o início</a>
+</div>
+
+<script>
+function liberar(){
+  document.getElementById("bloqueio").style.display="none";
+  document.getElementById("conteudo").style.display="block";
+}
+</script>
 
 </body>
 </html>
