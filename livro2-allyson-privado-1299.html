@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Livro 2</title>
-<style>
-body{
-  font-family: Arial;
-  background:#f5f0ff;
-  text-align:center;
-  padding:40px;
-}
-.card{
-  background:white;
-  padding:30px;
-  border-radius:15px;
-  max-width:400px;
-  margin:auto;
-}
-button{
-  padding:15px 25px;
-  background:#6a0dad;
-  color:white;
-  border:none;
-  border-radius:10px;
-  font-size:16px;
-}
-</style>
-</head>
+  <meta charset="UTF-8">
+  <title>Acesso Permitido</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #5a189a, #ffffff);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #5a189a;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #333;
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    .botao {
+      display: inline-block;
+      padding: 14px 25px;
+      background: #5a189a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .botao:hover {
+      background: #3c096c;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
 <body>
 
-<div class="card">
-  <h1>🔒 Livro 2 Bloqueado</h1>
-  <p>Pix: <b>12991078958</b></p>
-  <p><b>Allyson da Silva Pantoja</b></p>
-  <button onclick="liberar()">Já paguei</button>
-</div>
+  <div class="card">
+    <h1>✅ ACESSO PERMITIDO</h1>
+    <p>Pagamento confirmado com sucesso.<br>
+    Agora você pode acessar o conteúdo exclusivo.</p>
 
-<script>
-function liberar(){
-  document.body.innerHTML = "<h1>ACESSO LIBERADO ✅</h1>";
-}
-</script>
+    <!-- BOTÃO PARA O LIVRO 2 -->
+    <a class="botao" href="livro2-secreto.html">
+      📘 Acessar Livro 2
+    </a>
+  </div>
 
 </body>
 </html>
+
