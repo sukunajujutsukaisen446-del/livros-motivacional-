@@ -1,93 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Livro 1 – Reflexões</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Acesso Livro 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#f5efff;
-  color:#2b1a4b;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0d6efd, #ffffff);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-header{
-  background:linear-gradient(135deg,#6a0dad,#8e44ad);
-  color:white;
-  padding:30px 20px;
-  text-align:center;
-}
+    .box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 350px;
+      width: 90%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
 
-main{
-  max-width:900px;
-  background:white;
-  margin:30px auto;
-  padding:25px;
-  border-radius:15px;
-}
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
 
-li{
-  margin-bottom:12px;
-  font-size:1.05rem;
-}
-
-.botoes{
-  margin-top:35px;
-  text-align:center;
-}
-
-.botao{
-  display:inline-block;
-  margin:10px;
-  padding:14px 22px;
-  background:#6a0dad;
-  color:white;
-  text-decoration:none;
-  border-radius:10px;
-  font-weight:bold;
-}
-</style>
+    button {
+      padding: 12px 25px;
+      background: #0d6efd;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-<h1>📘 Livro 1</h1>
-<p>Versos de Reflexão</p>
-</header>
+  <div class="box">
+    <h2>🔒 Livro 1</h2>
+    <p>Digite a senha para acessar</p>
 
-<main>
-<ol>
-<li>Às vezes, o silêncio ensina mais do que mil palavras.</li>
-<li>Quem olha para dentro, entende melhor o mundo.</li>
-<li>Nem toda demora é atraso, às vezes é proteção.</li>
-<li>Crescer dói, mas permanecer igual dói ainda mais.</li>
-<li>A pressa rouba detalhes que a calma revela.</li>
-<li>O tempo mostra quem é ponte e quem é parede.</li>
-<li>Aprender a soltar também é uma forma de amar.</li>
-<li>Nem tudo que pesa é ruim, alguns pesos fortalecem.</li>
-<li>A verdade aparece quando as máscaras caem.</li>
-<li>A paz começa quando a comparação termina.</li>
-<li>O que você alimenta dentro de si, cresce.</li>
-<li>Algumas respostas só chegam quando aceitamos esperar.</li>
-<li>Errar faz parte, desistir é que atrasa o caminho.</li>
-<li>O passado ensina, mas não deve morar em nós.</li>
-<li>A fé transforma quedas em recomeços.</li>
-<li>Nem todo sorriso é felicidade, nem toda dor é fraqueza.</li>
-<li>A maturidade nasce quando o ego diminui.</li>
-<li>Quem se conhece, não se perde nos outros.</li>
-<li>O simples também pode ser profundo.</li>
-<li>Todo dia é uma nova chance de ser melhor que ontem.</li>
-</ol>
+    <input type="password" id="senha" placeholder="Senha do livro">
+    <button onclick="verificar()">Entrar</button>
+  </div>
 
-<div class="botoes">
-  <a class="botao" href="index.html">🏠 Página inicial</a>
- <a class="botao" href="livro2-allyson-privado-1299.html">📘 Livro 2</a>
-
-</div>
-</main>
+  <script>
+    function verificar() {
+      if (document.getElementById("senha").value === "LIVRO1-123") {
+        window.location.href = "livro1-conteudo.html";
+      } else {
+        alert("❌ Senha incorreta");
+      }
+    }
+  </script>
 
 </body>
 </html>
