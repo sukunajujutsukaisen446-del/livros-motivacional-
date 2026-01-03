@@ -2,83 +2,76 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Livro 3 – Obediência</title>
+  <title>Acesso Livro 3</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #5a189a, #ffffff);
+      background: linear-gradient(135deg, #006466, #ffffff);
       min-height: 100vh;
-      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 12px;
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 350px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
 
-    h1 {
-      text-align: center;
-      color: #5a189a;
-      margin-bottom: 20px;
-    }
-
-    p {
-      color: #333;
-      line-height: 1.7;
-      font-size: 16px;
-      margin-bottom: 15px;
-    }
-
-    .botao {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 25px;
-      background: #5a189a;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
+    input {
+      padding: 10px;
+      width: 100%;
+      margin: 15px 0;
       border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
     }
 
-    .botao:hover {
-      background: #3c096c;
+    button {
+      padding: 12px 25px;
+      background: #006466;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #004d4f;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>📘 Livro 3 – A Obediência que Protege</h1>
+  <div class="card">
+    <h2>🔒 Livro 3 Protegido</h2>
+    <p>Digite a senha para acessar</p>
 
-    <p>Havia um jovem chamado Lucas que trabalhava com seu pai em uma pequena plantação. Um dia, antes de sair, o pai disse:</p>
-
-    <p><strong>— Filho, hoje não vá pelo caminho curto da floresta. As chuvas deixaram o solo perigoso. Use o caminho mais longo.</strong></p>
-
-    <p>Lucas pensou em desobedecer. O caminho da floresta era mais rápido e ele já o conhecia bem. Mesmo assim, decidiu obedecer, ainda que sem entender totalmente o motivo.</p>
-
-    <p>Enquanto caminhava pelo trajeto mais longo, encontrou um vizinho com dificuldades para carregar suas ferramentas. Lucas ajudou, e o homem contou que uma grande parte da floresta havia desmoronado naquela manhã.</p>
-
-    <p>Se Lucas tivesse ido pelo caminho curto, teria se machucado gravemente.</p>
-
-    <p>No fim do dia, Lucas voltou para casa são e salvo. Ele entendeu que a obediência não é fraqueza, mas proteção.</p>
-
-    <p>Algumas semanas depois, o pai pediu que Lucas regasse a plantação apenas ao nascer do sol. Mesmo com o frio intenso, Lucas obedeceu.</p>
-
-    <p>No dia seguinte, os vizinhos que não seguiram a orientação perderam parte da colheita. A plantação de Lucas permaneceu intacta.</p>
-
-    <p>Com o tempo, ele percebeu que sempre que obedecia havia paz. Anos depois, já responsável pela plantação, Lucas ensinava:</p>
-
-    <p><strong>— Nem todo conselho faz sentido no momento, mas todo conselho certo traz proteção no futuro.</strong></p>
-
-    <a class="botao" href="index.html">⬅ Voltar para o início</a>
+    <input type="password" id="senha">
+    <button onclick="verificar()">Entrar</button>
   </div>
+
+  <script>
+    function verificar() {
+      const senha = document.getElementById("senha").value;
+
+      if (senha === "LIVRO3-OBEDIENCIA") {
+        alert("✅ Acesso liberado");
+        // aqui depois você pode redirecionar para um livro3-secreto.html
+      } else {
+        alert("❌ Senha incorreta");
+      }
+    }
+  </script>
 
 </body>
 </html>
