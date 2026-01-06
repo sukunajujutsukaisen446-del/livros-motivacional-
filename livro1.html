@@ -2,14 +2,14 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Acesso Livro 1</title>
+  <title>Livro 1 – Acesso</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0d6efd, #ffffff);
+      background: linear-gradient(135deg, #5a189a, #ffffff);
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -21,7 +21,7 @@
       padding: 30px;
       border-radius: 15px;
       text-align: center;
-      max-width: 350px;
+      max-width: 360px;
       width: 90%;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
@@ -37,31 +37,50 @@
 
     button {
       padding: 12px 25px;
-      background: #0d6efd;
+      background: #5a189a;
       color: #fff;
       border: none;
       border-radius: 10px;
       font-size: 16px;
       cursor: pointer;
     }
+
+    button:hover {
+      background: #3c096c;
+    }
+
+    .sucesso {
+      display: none;
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="box">
+  <div class="box" id="login">
     <h2>🔒 Livro 1</h2>
     <p>Digite a senha para acessar</p>
 
-    <input type="password" id="senha" placeholder="Senha do livro">
+    <input type="password" id="senha" placeholder="Senha">
     <button onclick="verificar()">Entrar</button>
+  </div>
+
+  <div class="box sucesso" id="ok">
+    <h2>✅ Acesso permitido</h2>
+    <p>Você pode continuar</p>
+
+    <a href="livro1-conteudo.html">
+      <button>📘 Ir para o Livro 1</button>
+    </a>
   </div>
 
   <script>
     function verificar() {
-      if (document.getElementById("senha").value === "LIVRO1-123") {
-       alert("✅ Acesso permitido!");
+      const senha = document.getElementById("senha").value;
 
+      if (senha === "LIVRO1-123nem") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("ok").style.display = "block";
       } else {
         alert("❌ Senha incorreta");
       }
