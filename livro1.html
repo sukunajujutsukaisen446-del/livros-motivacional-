@@ -1,71 +1,23 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<title>Acesso Livro 1</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  .box {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;
-  }
-  input {
-    padding: 10px;
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  button {
-    padding: 10px 20px;
-    background: purple;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  a {
-    display: inline-block;
-    margin-top: 15px;
-    text-decoration: none;
-    background: green;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 8px;
-  }
-</style>
-</head>
-<body>
-
-<div class="box">
-  <h2>🔒 Livro 1</h2>
-  <input type="password" id="senha" placeholder="Digite a senha">
-  <button onclick="verificar()">Entrar</button>
-
-  <div id="resultado"></div>
-</div>
+<input type="password" id="senha" placeholder="Digite a senha">
+<button onclick="verificarSenha()">Entrar</button>
+<div id="resultado"></div>
 
 <script>
-function verificar() {
+function verificarSenha() {
   const senha = document.getElementById("senha").value;
+
   if (senha === "LIVRO1-123nem") {
-    document.getElementById("resultado").innerHTML =
-      '<p>✅ Acesso permitido</p>' +
-      '<a href="livro1.html">📘 Ir para o Livro 1</a>';
+    document.getElementById("resultado").innerHTML = `
+      <p style="color:green;font-weight:bold;">Acesso permitido</p>
+      <button onclick="irParaLivro()">Ir para o Livro 1</button>
+    `;
   } else {
     document.getElementById("resultado").innerHTML =
-      '<p style="color:red">❌ Senha incorreta</p>';
+      "<p style='color:red;'>Senha incorreta</p>";
   }
 }
-</script>
 
-</body>
-</html>
+function irParaLivro() {
+  window.location.href = "livro1-conteudo.html";
+}
+</script>
