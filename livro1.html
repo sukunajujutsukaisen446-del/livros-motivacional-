@@ -1,91 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Livro 1 – Acesso</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #5a189a, #ffffff);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .box {
-      background: #fff;
-      padding: 30px;
-      border-radius: 15px;
-      text-align: center;
-      max-width: 360px;
-      width: 90%;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 15px 0;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
-
-    button {
-      padding: 12px 25px;
-      background: #5a189a;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #3c096c;
-    }
-
-    .sucesso {
-      display: none;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Acesso Livro 1</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+  }
+  input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  button {
+    padding: 10px 20px;
+    background: purple;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background: green;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+</style>
 </head>
-
 <body>
 
-  <div class="box" id="login">
-    <h2>🔒 Livro 1</h2>
-    <p>Digite a senha para acessar</p>
+<div class="box">
+  <h2>🔒 Livro 1</h2>
+  <input type="password" id="senha" placeholder="Digite a senha">
+  <button onclick="verificar()">Entrar</button>
 
-    <input type="password" id="senha" placeholder="Senha">
-    <button onclick="verificar()">Entrar</button>
-  </div>
+  <div id="resultado"></div>
+</div>
 
-  <div class="box sucesso" id="ok">
-    <h2>✅ Acesso permitido</h2>
-    <p>Você pode continuar</p>
-
-   <a href="livro1.html">📘 Ir para o Livro 1</a>
-      <button>📘 Ir para o Livro 1</button>
-    </a>
-  </div>
-
-  <script>
-    function verificar() {
-      const senha = document.getElementById("senha").value;
-
-      if (senha === "book10") {
-        document.getElementById("login").style.display = "none";
-        document.getElementById("ok").style.display = "block";
-      } else {
-        alert("❌ Senha incorreta");
-      }
-    }
-  </script>
+<script>
+function verificar() {
+  const senha = document.getElementById("senha").value;
+  if (senha === "LIVRO1-123nem") {
+    document.getElementById("resultado").innerHTML =
+      '<p>✅ Acesso permitido</p>' +
+      '<a href="livro1.html">📘 Ir para o Livro 1</a>';
+  } else {
+    document.getElementById("resultado").innerHTML =
+      '<p style="color:red">❌ Senha incorreta</p>';
+  }
+}
+</script>
 
 </body>
 </html>
