@@ -1,58 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Livro 1 - Conteúdo</title>
-
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #ffffff, #e6d6ff);
-  padding: 30px;
-}
-
-.container {
-  max-width: 800px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-h1 {
-  text-align: center;
-  color: purple;
-}
-
-a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 20px;
-  background: purple;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Livro 1 - Acesso Protegido</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    .box {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      padding: 10px;
+      width: 100%;
+      margin-top: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .livro {
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
-  <h1>📘 Livro 1 – Reflexões</h1>
+<div class="box">
+  <h2>🔒 Acesso ao Livro 1</h2>
+  <p>Digite a senha para continuar:</p>
 
-  <p>Às vezes, o silêncio ensina mais do que mil palavras.</p>
-  <p>Quem olha para dentro, entende melhor o mundo.</p>
-  <p>Nem toda demora é atraso, às vezes é proteção.</p>
-  <p>Crescer dói, mas permanecer igual dói ainda mais.</p>
-  <p>A calma revela aquilo que o barulho esconde.</p>
-  <p>Errar faz parte, desistir é que atrasa o caminho.</p>
-  <p>Todo dia é uma nova chance de ser melhor.</p>
+  <input type="password" id="senha" placeholder="Digite a senha">
+  <button onclick="verificarSenha()">Acessar</button>
 
-  <a href="index.html">⬅ Voltar para o início</a>
+  <div id="mensagem"></div>
+
+  <div class="livro" id="conteudoLivro">
+    <hr>
+
+    <h1>RECOMEÇAR SEMPRE</h1>
+    <h3>Um livro de motivação para fortalecer a mente, o coração e a disciplina</h3>
+
+    <p><strong>Apresentação</strong></p>
+    <p>
+      Este livro foi escrito para quem já pensou em desistir, mas continuou.
+      Para quem caiu, se levantou, e mesmo cansado escolheu seguir em frente.
+    </p>
+
+    <h2>Capítulo 1 — Você é mais forte do que pensa</h2>
+    <p>
+      Muitas vezes o maior inimigo não está fora, mas dentro da própria mente...
+    </p>
+
+    <h2>Capítulo 2 — O começo nem sempre é bonito</h2>
+    <p>
+      Todo início é confuso. Você vai errar, se perder e pensar em voltar atrás...
+    </p>
+
+    <h2>Capítulo 3 — Disciplina vence motivação</h2>
+    <p>
+      Motivação é passageira. Disciplina é o que sustenta resultados...
+    </p>
+
+    <h2>Capítulo 4 — Cansaço não é desistência</h2>
+    <p>
+      Descansar é necessário. Desistir não...
+    </p>
+
+    <h2>Capítulo 5 — Comparação é armadilha</h2>
+    <p>
+      Cada pessoa tem um tempo, um processo e uma história...
+    </p>
+
+    <h2>Capítulo 6 — Pequenas atitudes, grandes resultados</h2>
+    <p>
+      Grandes mudanças começam com hábitos simples...
+    </p>
+
+    <h2>Capítulo 7 — Erros fazem parte do caminho</h2>
+    <p>
+      Errar não te define. Permanecer no erro, sim...
+    </p>
+
+    <h2>Capítulo 8 — Silêncio também é progresso</h2>
+    <p>
+      Nem tudo precisa ser mostrado...
+    </p>
+
+    <h2>Capítulo 9 — A mente precisa de cuidado</h2>
+    <p>
+      Aquilo que você consome influencia quem você se torna...
+    </p>
+
+    <h2>Capítulo 10 — Fé em si mesmo</h2>
+    <p>
+      Acredite: você é capaz de mudar sua história...
+    </p>
+
+    <h3>Conclusão — Continue</h3>
+    <p>
+      Nunca pare. Continue.
+    </p>
+
+    <p><strong>Escritor:</strong> Allyson</p>
+  </div>
 </div>
+
+<script>
+function verificarSenha() {
+  const senha = document.getElementById("senha").value;
+  const mensagem = document.getElementById("mensagem");
+  const livro = document.getElementById("conteudoLivro");
+
+  if (senha === "LIVRO1-123nem") {
+    mensagem.innerHTML = "<p style='color:green;font-weight:bold;'>✅ Acesso permitido</p>";
+    livro.style.display = "block";
+  } else {
+    mensagem.innerHTML = "<p style='color:red;'>❌ Senha incorreta</p>";
+    livro.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
