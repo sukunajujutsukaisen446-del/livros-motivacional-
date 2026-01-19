@@ -139,6 +139,26 @@ function abrirLivro(livro){
   document.getElementById("conteudo").innerHTML = texto;
 }
 </script>
+  <script>
+function pedirSenha(livro){
+  const senhas = {
+    1: "LIVRO1-123nem",
+    2: "LIVRO2-123nem",
+    3: "LIVRO3-123nem"
+  };
+
+  const senha = prompt("Digite a senha do livro:");
+
+  if(senha === senhas[livro]){
+    if(livro === 1) window.location.href = "livro1-conteudo.html";
+    if(livro === 2) window.location.href = "livro2-secreto.html";
+    if(livro === 3) window.location.href = "livro3.html";
+  } else {
+    alert("Senha incorreta!");
+  }
+}
+</script>
+
 
 </body>
 </html>
