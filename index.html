@@ -1,92 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Livros Motivacional</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #5a2ea6, #ffffff);
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<title>Livros Motivacionais</title>
 
-    .container {
-      max-width: 500px;
-      margin: 80px auto;
-      background: #ffffff;
-      padding: 40px 25px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    }
-
-    h1 {
-      color: #5a2ea6;
-      margin-bottom: 5px;
-    }
-
-    h2 {
-      font-size: 14px;
-      color: #666;
-      margin-top: 0;
-      margin-bottom: 30px;
-      letter-spacing: 2px;
-    }
-
-    .preco {
-      font-size: 18px;
-      font-weight: bold;
-      color: #5a2ea6;
-      margin-bottom: 20px;
-    }
-
-    .botao {
-      display: inline-block;
-      padding: 15px 30px;
-      background: #5a2ea6;
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 10px;
-    }
-
-    .botao:hover {
-      background: #452080;
-    }
-
-    .suporte {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #444;
-    }
-  </style>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#f2f2f2;
+  text-align:center;
+  padding:20px;
+}
+.box{
+  background:#fff;
+  max-width:600px;
+  margin:auto;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+button{
+  padding:12px 25px;
+  font-size:16px;
+  background:#5a2ea6;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  margin-top:15px;
+}
+input{
+  padding:10px;
+  width:80%;
+  font-size:16px;
+  margin-top:10px;
+}
+.texto{
+  margin-top:25px;
+  text-align:left;
+  line-height:1.6;
+}
+.preco{
+  font-weight:bold;
+  margin-bottom:20px;
+  color:#5a2ea6;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>LIVROS MOTIVACIONAL</h1>
-    <h2>ALLYSON</h2>
+<div class="box">
+  <h2>📘 Livros Motivacionais</h2>
+  <p class="preco">Apenas 10 reais</p>
 
-    <p class="preco">Apenas 10 reais</p>
-
-    <a class="botao" href="livro1.html">
-      📘 Acessar Livro 1
-    </a>
-
-    <div class="suporte">
-      <p>
-        SUPORTE – PAGOU?  
-        <br>
-        MANDE O COMPROVANTE PARA MIM  
-        <br>
-        QUE EU MANDO A SENHA PARA VOCÊ
-        <br><br>
-        📲 WhatsApp: <strong>12992176676</strong>
-      </p>
-    </div>
+  <div id="conteudo">
+    <button onclick="pedirSenha(1)">Acessar Livro 1</button>
   </div>
+</div>
+
+<script>
+const senhas = {
+  1: "LIVRO1-123nem",
+  2: "LIVRO2-123",
+  3: "LIVRO3-123"
+};
+
+function pedirSenha(livro){
+  document.getElementById("conteudo").innerHTML = `
+    <p>Digite a senha do Livro ${livro}</p>
+    <input type="password" id="senha">
+    <br>
+    <button onclick="verificar(${livro})">Entrar</button>
+    <p id="erro" style="color:red;"></p>
+  `;
+}
+
+function verificar(livro){
+  const senha = document.getElementById("senha").value;
+  if(senha === senhas[livro]){
+    abrirLivro(livro);
+  }else{
+    document.getElementById("erro").innerText = "Senha incorreta";
+  }
+}
+
+function abrirLivro(livro){
+  let texto = "";
+
+  if(livro === 1){
+    texto = `
+    <h3>📘 Livro 1</h3>
+    <p class="texto">
+    Aqui entra o texto completo do Livro 1.<br><br>
+    Você pode escrever quantos parágrafos quiser.
+    </p>
+    <button onclick="pedirSenha(2)">Acessar Livro 2</button>
+    `;
+  }
+
+  if(livro === 2){
+    texto = `
+    <h3>📗 Livro 2</h3>
+    <p class="texto">
+    Aqui entra o texto completo do Livro 2.
+    </p>
+    <button onclick="pedirSenha(3)">Acessar Livro 3</button>
+    `;
+  }
+
+  if(livro === 3){
+    texto = `
+    <h3>📕 Livro 3</h3>
+    <p class="texto">
+    Depois daquele dia, Lucas passou a valorizar ainda mais os conselhos do pai...
+    <br><br>
+    (todo o texto do Livro 3 fica aqui)
+    </p>
+    `;
+  }
+
+  document.getElementById("conteudo").innerHTML = texto;
+}
+</script>
 
 </body>
 </html>
