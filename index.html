@@ -1,164 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Livros Motivacionais</title>
+  <meta charset="UTF-8">
+  <title>Livros Motivacionais</title>
 
-<style>
-body{
-  font-family: Arial, sans-serif;
-  background:#f2f2f2;
-  text-align:center;
-}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      text-align: center;
+      padding: 40px;
+    }
 
-.card{
-  background:#fff;
-  width:90%;
-  max-width:600px;
-  margin:40px auto;
-  padding:25px;
-  border-radius:10px;
-  box-shadow:0 0 10px rgba(0,0,0,.1);
-}
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-button{
-  background:#5a2dbd;
-  color:#fff;
-  border:none;
-  padding:12px 20px;
-  border-radius:8px;
-  cursor:pointer;
-  margin-top:10px;
-}
+    button {
+      background: #6a0dad;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 16px;
+    }
 
-button:hover{
-  background:#45209a;
-}
+    button:hover {
+      background: #520a9c;
+    }
 
-input{
-  padding:10px;
-  width:80%;
-  margin-top:10px;
-}
+    input {
+      padding: 10px;
+      width: 80%;
+      margin-top: 10px;
+    }
 
-.texto{
-  text-align:left;
-  margin-top:20px;
-}
-</style>
+    .pix {
+      margin-top: 40px;
+      font-size: 18px;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="card">
-  <h2>📘 Livros Motivacionais</h2>
-  <p style="color:purple;"><b>Apenas 10 reais</b></p>
+  <div class="card">
+    <h2>📚 Livros Motivacionais</h2>
+    <p><strong>Apenas 10 reais</strong></p>
 
-  <div id="conteudo">
-    <button onclick="pedirSenha(1)">Acessar Livro 1</button>
+    <div id="conteudo">
+      <button onclick="pedirSenha(1)">Acessar Livro 1</button>
+    </div>
   </div>
-</div>
 
-<hr>
-
-<p><b>💰 PAGAMENTO VIA PIX</b></p>
-<p>Chave PIX:<br><b>1299107-8958</b></p>
-<p style="font-size:14px;color:#555;">
-Após o pagamento, envie o comprovante para receber a senha.
-</p>
+  <div class="pix">
+    <h3>💰 PAGAMENTO VIA PIX</h3>
+    <p><strong>Chave PIX:</strong> 1299107-8958</p>
+    <p>Após o pagamento, envie o comprovante para receber a senha.</p>
+  </div>
 
 <script>
-const senhas = {
-  1: "LIVRO1-123nem",
-  2: "LIVRO2-123",
-  3: "LIVRO3-123"
-};
-
-function pedirSenha(livro){
-  document.getElementById("conteudo").innerHTML = `
-    <p>Digite a senha do Livro ${livro}</p>
-    <input type="password" id="senha">
-    <br>
-    <button onclick="verificar(${livro})">Entrar</button>
-    <p id="erro" style="color:red;"></p>
-  `;
-}
-
-function verificar(livro){
-  const senha = document.getElementById("senha").value;
-
-  if(senha === senhas[livro]){
-    abrirLivro(livro);
-  }else{
-    document.getElementById("erro").innerText = "Senha incorreta";
-  }
-}
-
-function abrirLivro(livro){
-  let texto = "";
-
-  if(livro === 1){
-    texto = `
-    <h3>📗 Livro 1 — RECOMEÇAR SEMPRE</h3>
-    <div class="texto">
-    <p><b>Um livro de motivação para fortalecer a mente, o coração e a disciplina</b></p>
-
-    <p>Este livro foi escrito para quem já pensou em desistir, mas continuou...</p>
-
-    <h4>Capítulo 1 — Você é mais forte do que pensa</h4>
-    <p>Muitas vezes o maior inimigo não está fora...</p>
-
-    <h4>Capítulo 2 — O começo nem sempre é bonito</h4>
-    <p>Todo início é confuso...</p>
-
-    <h4>Capítulo 3 — Disciplina vence motivação</h4>
-    <p>Motivação é passageira...</p>
-
-    <p><i>Escritor: Allyson</i></p>
-    </div>
-
-    <button onclick="pedirSenha(2)">Acessar Livro 2</button>
-    `;
-  }
-
-  if(livro === 2){
-  pedirSenha(2);
-}
-
-  }
-
-  if(livro === 3){
-    texto = `
-    <h3>📕 Livro 3</h3>
-    <p class="texto">
-    Depois daquele dia, Lucas passou a valorizar ainda mais os conselhos do pai...
-    </p>
-    `;
-  }
-
-  document.getElementById("conteudo").innerHTML = texto;
-}
-</script>
-  <script>
-function pedirSenha(livro){
   const senhas = {
     1: "LIVRO1-123nem",
-    2: "LIVRO2-123nem",
-    3: "LIVRO3-123nem"
+    2: "LIVRO2-123",
+    3: "LIVRO3-123"
   };
 
-  const senha = prompt("Digite a senha do livro:");
-
-  if(senha === senhas[livro]){
-    if(livro === 1) window.location.href = "livro1-conteudo.html";
-    if(livro === 2) window.location.href = "livro2-secreto.html";
-    if(livro === 3) window.location.href = "livro3.html";
-  } else {
-    alert("Senha incorreta!");
+  function pedirSenha(livro) {
+    document.getElementById("conteudo").innerHTML = `
+      <p>Digite a senha do Livro ${livro}</p>
+      <input type="password" id="senha">
+      <br><br>
+      <button onclick="verificar(${livro})">Entrar</button>
+      <p id="erro" style="color:red;"></p>
+    `;
   }
-}
-</script>
 
+  function verificar(livro) {
+    const senha = document.getElementById("senha").value;
+
+    if (senha === senhas[livro]) {
+      abrirLivro(livro);
+    } else {
+      document.getElementById("erro").innerText = "Senha incorreta";
+    }
+  }
+
+  function abrirLivro(livro) {
+
+    if (livro === 1) {
+      document.getElementById("conteudo").innerHTML = `
+        <h3>📘 Livro 1 - RECOMEÇAR SEMPRE</h3>
+        <p>Um livro de motivação para fortalecer a mente.</p>
+
+        <button onclick="window.location.href='livro1-conteudo.html'">
+          Ler Livro 1
+        </button>
+
+        <br><br>
+
+        <button onclick="pedirSenha(2)">
+          Acessar Livro 2
+        </button>
+      `;
+    }
+
+    if (livro === 2) {
+      window.location.href = "livro2-secreto.html";
+    }
+
+    if (livro === 3) {
+      window.location.href = "livro3.html";
+    }
+  }
+</script>
 
 </body>
 </html>
