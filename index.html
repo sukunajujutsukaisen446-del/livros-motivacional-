@@ -30,14 +30,13 @@ button{
   cursor:pointer;
   margin-top:15px;
 }
-button:hover{opacity:.9}
 input{
   padding:10px;
   width:80%;
   max-width:300px;
 }
 .pix{
-  margin-top:50px;
+  margin-top:40px;
   border-top:1px solid #ddd;
   padding-top:20px;
 }
@@ -56,16 +55,15 @@ input{
 
   <p style="color:#6a1b9a;font-weight:bold;">Apenas 10 reais</p>
 
-  <div id="conteudo">
-    <button onclick="pedirSenha(1)">Acessar Livro 1</button>
-  </div>
+  <!-- BOTÃO FIXO -->
+  <button onclick="mostrarSenha(1)">Acessar Livro 1</button>
 
+  <div id="area"></div>
   <p id="erro" style="color:red;"></p>
 
   <div class="pix">
     <h3>💰 PAGAMENTO VIA PIX</h3>
     <p><b>Chave PIX:</b> 1299107-8958</p>
-    <p>Após o pagamento, envie o comprovante para receber a senha.</p>
   </div>
 </div>
 
@@ -76,17 +74,18 @@ const senhas = {
   3: "LIVRO3-123"
 };
 
-function pedirSenha(livro){
+function mostrarSenha(livro){
   document.getElementById("erro").innerText = "";
-  document.getElementById("conteudo").innerHTML = `
+  document.getElementById("area").innerHTML = `
     <p>Digite a senha do Livro ${livro}</p>
-    <input type="password" id="senha"><br><br>
+    <input type="password" id="senha${livro}">
+    <br>
     <button onclick="verificar(${livro})">Entrar</button>
   `;
 }
 
 function verificar(livro){
-  const senha = document.getElementById("senha").value;
+  const senha = document.getElementById("senha"+livro).value;
 
   if(senha === senhas[livro]){
     abrirLivro(livro);
@@ -97,18 +96,18 @@ function verificar(livro){
 
 function abrirLivro(livro){
   if(livro === 1){
-    document.getElementById("conteudo").innerHTML = `
-      <h2>📘 Livro 1</h2>
+    document.getElementById("area").innerHTML = `
+      <h3>📘 Livro 1</h3>
       <p>Recomeçar Sempre</p>
-      <button onclick="pedirSenha(2)">Acessar Livro 2</button>
+      <button onclick="mostrarSenha(2)">Acessar Livro 2</button>
     `;
   }
 
   if(livro === 2){
-    document.getElementById("conteudo").innerHTML = `
-      <h2>📘 Livro 2</h2>
+    document.getElementById("area").innerHTML = `
+      <h3>📘 Livro 2</h3>
       <p>Você não está sozinho</p>
-      <button onclick="pedirSenha(3)">Acessar Livro 3</button>
+      <button onclick="mostrarSenha(3)">Acessar Livro 3</button>
     `;
   }
 
