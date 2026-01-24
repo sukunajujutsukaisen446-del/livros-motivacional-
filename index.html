@@ -1,72 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Livros Motivacionais</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Livros Motivacionais</title>
 
-<style>
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  background:#f2f2f2;
-  margin:0;
-}
-.container{
-  max-width:800px;
-  margin:60px auto;
-  background:#fff;
-  padding:40px;
-  border-radius:10px;
-  text-align:center;
-  box-shadow:0 0 15px rgba(0,0,0,.1);
-}
-button{
-  width:100%;
-  max-width:350px;
-  padding:15px;
-  margin:12px 0;
-  border:none;
-  border-radius:8px;
-  background:#6a1b9a;
-  color:#fff;
-  font-size:18px;
-  cursor:pointer;
-}
-button:hover{
-  opacity:0.9;
-}
-</style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background: #6a0dad;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #520a9c;
+    }
+
+    input {
+      padding: 10px;
+      width: 80%;
+      margin-top: 10px;
+    }
+
+    .pix {
+      margin-top: 40px;
+      font-size: 18px;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="card">
+    <h2>📚 Livros Motivacionais</h2>
+    <p><strong>Apenas 10 reais</strong></p>
 
-<h1>📘 Livros Motivacionais</h1>
+    <div id="conteudo">
+      <button onclick="pedirSenha(1)">Acessar Livro 1</button>
+    </div>
+  </div>
 
-<p>
-📚 Aqui você encontra textos e livros motivacionais que inspiram,
-elevam sua autoestima e ajudam a superar desafios da vida. ✨
-</p>
+  <div class="pix">
+    <h3>💰 PAGAMENTO VIA PIX</h3>
+    <p><strong>Chave PIX:</strong> 1299107-8958</p>
+    <p>Após o pagamento, envie o comprovante para receber a senha.</p>
+  </div>
 
-<p style="color:#6a1b9a;font-weight:bold;">
-Apenas 10 reais
-</p>
+<script>
+  const senhas = {
+    1: "LIVRO1-123nem",
+    2: "LIVRO2-123",
+    3: "LIVRO3-123"
+  };
 
-<!-- BOTÕES -->
-<button onclick="window.location.href='livro1-secreto.html'">
-🔒 Livro 1
-</button>
+  function pedirSenha(livro) {
+    document.getElementById("conteudo").innerHTML = `
+      <p>Digite a senha do Livro ${livro}</p>
+      <input type="password" id="senha">
+      <br><br>
+      <button onclick="verificar(${livro})">Entrar</button>
+      <p id="erro" style="color:red;"></p>
+    `;
+  }
 
-<button onclick="window.location.href='livro2.html'">
-📖 Livro 2
-</button>
+  function verificar(livro) {
+    const senha = document.getElementById("senha").value;
 
-<button onclick="window.location.href='livro3.html'">
-📖 Livro 3
-</button>
+    if (senha === senhas[livro]) {
+      abrirLivro(livro);
+    } else {
+      document.getElementById("erro").innerText = "Senha incorreta";
+    }
+  }
 
-</div>
+  function abrirLivro(livro) {
+
+    if (livro === 1) {
+      document.getElementById("conteudo").innerHTML = `
+        <h3>📘 Livro 1 - RECOMEÇAR SEMPRE</h3>
+        <p>Um livro de motivação para fortalecer a mente.</p>
+
+        <button onclick="window.location.href='livro1-conteudo.html'">
+          Ler Livro 1
+        </button>
+
+        <br><br>
+
+        <button onclick="pedirSenha(2)">
+          Acessar Livro 2
+        </button>
+      `;
+    }
+
+    if (livro === 2) {
+      window.location.href = "livro2-secreto.html";
+    }
+
+    if (livro === 3) {
+      window.location.href = "livro3.html";
+    }
+  }
+</script>
 
 </body>
 </html>
