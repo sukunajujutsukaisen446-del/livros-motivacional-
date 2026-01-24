@@ -102,32 +102,43 @@ elevam sua autoestima e ajudam a superar desafios da vida. ✨
 
   function abrirLivro(livro) {
 
-    if (livro === 1) {
-      document.getElementById("conteudo").innerHTML = `
-        <h3>📘 Livro 1 - RECOMEÇAR SEMPRE</h3>
-        <p>Um livro de motivação para fortalecer a mente.</p>
+   [<script>
+function abrirLivro(livro) {
 
-        <button onclick="window.location.href='livro1-conteudo.html'">
-          Ler Livro 1
-        </button>
+  if (livro === 1) {
+    document.getElementById("conteudo").innerHTML = `
+      <h3>📘 Livro 1 — RECOMEÇAR SEMPRE</h3>
+      <p>Um livro de motivação para fortalecer a mente.</p>
 
-        <br><br>
+      <button onclick="window.location.href='livro1-conteudo.html'">
+        Ler Livro 1
+      </button>
 
-        <button onclick="pedirSenha(2)">
-          Acessar Livro 2
-        </button>
-      `;
-    }
+      <br><br>
 
-    if (livro === 2) {
-      window.location.href = "livro2-secreto.html";
-    }
+      <button onclick="pedirSenha(2)">
+        Acessar Livro 2
+      </button>
 
-    if (livro === 3) {
-      window.location.href = "livro3.html";
-    }
+      <br><br>
+
+      <button onclick="pedirSenha(3)">
+        Acessar Livro 3
+      </button>
+    `;
   }
+
+  if (livro === 2) {
+    window.location.href = "livro2-secreto.html";
+  }
+
+  if (livro === 3) {
+    window.location.href = "livro3.html";
+  }
+}
 </script>
 
-</body>
+}
+
 </html>
+</body>
