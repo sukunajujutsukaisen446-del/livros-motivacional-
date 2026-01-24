@@ -13,32 +13,27 @@ body{
 }
 .container{
   max-width:800px;
-  margin:40px auto;
+  margin:60px auto;
   background:#fff;
-  padding:30px;
+  padding:40px;
   border-radius:10px;
-  box-shadow:0 0 15px rgba(0,0,0,.1);
   text-align:center;
+  box-shadow:0 0 15px rgba(0,0,0,.1);
 }
 button{
-  padding:12px 25px;
+  width:100%;
+  max-width:350px;
+  padding:15px;
+  margin:12px 0;
   border:none;
-  border-radius:6px;
+  border-radius:8px;
   background:#6a1b9a;
   color:#fff;
-  font-size:16px;
+  font-size:18px;
   cursor:pointer;
-  margin-top:15px;
 }
-input{
-  padding:10px;
-  width:80%;
-  max-width:300px;
-}
-.pix{
-  margin-top:40px;
-  border-top:1px solid #ddd;
-  padding-top:20px;
+button:hover{
+  opacity:0.9;
 }
 </style>
 </head>
@@ -46,76 +41,32 @@ input{
 <body>
 
 <div class="container">
-  <h1>📘 Livros Motivacionais</h1>
 
-  <p>
-    📚 Aqui você encontra textos e livros motivacionais que inspiram,
-    elevam sua autoestima e ajudam a superar desafios da vida. ✨
-  </p>
+<h1>📘 Livros Motivacionais</h1>
 
-  <p style="color:#6a1b9a;font-weight:bold;">Apenas 10 reais</p>
+<p>
+📚 Aqui você encontra textos e livros motivacionais que inspiram,
+elevam sua autoestima e ajudam a superar desafios da vida. ✨
+</p>
 
-  <!-- BOTÃO FIXO -->
-  <button onclick="mostrarSenha(1)">Acessar Livro 1</button>
+<p style="color:#6a1b9a;font-weight:bold;">
+Apenas 10 reais
+</p>
 
-  <div id="area"></div>
-  <p id="erro" style="color:red;"></p>
+<!-- BOTÕES -->
+<button onclick="window.location.href='livro1-secreto.html'">
+🔒 Livro 1
+</button>
 
-  <div class="pix">
-    <h3>💰 PAGAMENTO VIA PIX</h3>
-    <p><b>Chave PIX:</b> 1299107-8958</p>
-  </div>
+<button onclick="window.location.href='livro2.html'">
+📖 Livro 2
+</button>
+
+<button onclick="window.location.href='livro3.html'">
+📖 Livro 3
+</button>
+
 </div>
-
-<script>
-const senhas = {
-  1: "LIVRO1-123nem",
-  2: "LIVRO2-123",
-  3: "LIVRO3-123"
-};
-
-function mostrarSenha(livro){
-  document.getElementById("erro").innerText = "";
-  document.getElementById("area").innerHTML = `
-    <p>Digite a senha do Livro ${livro}</p>
-    <input type="password" id="senha${livro}">
-    <br>
-    <button onclick="verificar(${livro})">Entrar</button>
-  `;
-}
-
-function verificar(livro){
-  const senha = document.getElementById("senha"+livro).value;
-
-  if(senha === senhas[livro]){
-    abrirLivro(livro);
-  }else{
-    document.getElementById("erro").innerText = "Senha incorreta";
-  }
-}
-
-function abrirLivro(livro){
-  if(livro === 1){
-    document.getElementById("area").innerHTML = `
-      <h3>📘 Livro 1</h3>
-      <p>Recomeçar Sempre</p>
-      <button onclick="mostrarSenha(2)">Acessar Livro 2</button>
-    `;
-  }
-
-  if(livro === 2){
-    document.getElementById("area").innerHTML = `
-      <h3>📘 Livro 2</h3>
-      <p>Você não está sozinho</p>
-      <button onclick="mostrarSenha(3)">Acessar Livro 3</button>
-    `;
-  }
-
-  if(livro === 3){
-    window.location.href = "livro3.html";
-  }
-}
-</script>
 
 </body>
 </html>
