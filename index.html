@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Livros Motivacionais</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -13,44 +14,29 @@
     }
 
     h1 {
-      color: #2c3e50;
+      color: #222;
     }
 
     .descricao {
-      max-width: 700px;
-      margin: 20px auto;
-      font-size: 1.1em;
-      color: #555;
-    }
-
-    .preco {
       margin: 20px 0;
-      font-weight: bold;
-      color: #27ae60;
-      font-size: 1.2em;
+      font-size: 1.1em;
     }
 
-    button {
+    .botao {
       display: block;
-      width: 260px;
-      margin: 15px auto;
+      margin: 20px auto;
       padding: 15px;
-      font-size: 1em;
+      width: 260px;
+      font-size: 18px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      background: #3498db;
+      background: #1d2671;
       color: white;
     }
 
-    button:hover {
-      background: #2980b9;
-    }
-
-    footer {
-      margin-top: 40px;
-      color: #666;
-      font-size: 0.9em;
+    .botao:hover {
+      opacity: 0.9;
     }
   </style>
 </head>
@@ -60,42 +46,17 @@
   <h1>📚 Livros Motivacionais</h1>
 
   <p class="descricao">
-    📚 Aqui você encontra textos e livros motivacionais que inspiram, elevam sua autoestima e ajudam a superar desafios da vida. ✨
+    Aqui você encontra textos e livros motivacionais para fortalecer a mente
+    e continuar mesmo nos dias difíceis.
   </p>
 
-  <p class="preco">Apenas 10 reais</p>
-
-  <!-- LIVRO 1 (SEM SENHA) -->
-  <button onclick="window.location.href='livro1.html'">
+  <button class="botao" onclick="window.location.href='livro1.html'">
     Acessar Livro 1
   </button>
 
-  <!-- LIVRO 2 (SEM SENHA) -->
-  <button onclick="window.location.href='livro2.html'">
+  <button class="botao" onclick="window.location.href='livro2.html'">
     Acessar Livro 2
   </button>
-
-  <!-- LIVRO 3 (COM SENHA) -->
-  <button onclick="acessarLivro3()">
-    🔒 Acessar Livro 3
-  </button>
-
-  <footer>
-    <p>Chave Pix: 1299107-8958</p>
-    <p>© 2026 — Allyson</p>
-  </footer>
-
-  <script>
-    function acessarLivro3() {
-      let senha = prompt("Digite a senha do Livro 3:");
-
-      if (senha === "LIVRO3-123") {
-        window.location.href = "livro3.html";
-      } else {
-        alert("Senha incorreta!");
-      }
-    }
-  </script>
 
 </body>
 </html>
