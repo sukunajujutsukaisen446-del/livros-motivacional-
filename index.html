@@ -7,56 +7,73 @@
 
   <style>
     body {
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f8;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
       text-align: center;
-      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: white;
+      color: #333;
+      padding: 40px 25px;
+      border-radius: 15px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
 
     h1 {
-      color: #222;
+      margin-bottom: 15px;
+      color: #6a11cb;
     }
 
-    .descricao {
-      margin: 20px 0;
-      font-size: 1.1em;
+    p {
+      font-size: 1.05em;
+      margin-bottom: 25px;
     }
 
-    .botao {
-      display: block;
-      margin: 20px auto;
+    button {
+      width: 100%;
       padding: 15px;
-      width: 260px;
-      font-size: 18px;
+      margin: 10px 0;
+      font-size: 17px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      background: #1d2671;
+      background: #6a11cb;
       color: white;
     }
 
-    .botao:hover {
-      opacity: 0.9;
+    button:hover {
+      background: #5311a8;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>📚 Livros Motivacionais</h1>
+  <div class="container">
+    <h1>📚 Livros Motivacionais</h1>
 
-  <p class="descricao">
-    Aqui você encontra textos e livros motivacionais para fortalecer a mente
-    e continuar mesmo nos dias difíceis.
-  </p>
+    <p>
+      Aqui você encontra livros e textos para fortalecer a mente
+      e continuar mesmo nos dias difíceis.
+    </p>
 
-  <button class="botao" onclick="window.location.href='livro1.html'">
-    Acessar Livro 1
-  </button>
+    <button onclick="window.location.href='livro1.html'">
+      Acessar Livro 1
+    </button>
 
-  <button class="botao" onclick="window.location.href='livro2.html'">
-    Acessar Livro 2
-  </button>
+    <button onclick="window.location.href='livro2.html'">
+      Acessar Livro 2
+    </button>
+  </div>
 
 </body>
 </html>
