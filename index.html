@@ -9,70 +9,87 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: white;
-      text-align: center;
-      min-height: 100vh;
+      background: #f2f2f2;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
-    .container {
+    .card {
       background: white;
-      color: #333;
-      padding: 40px 25px;
-      border-radius: 15px;
-      max-width: 400px;
-      width: 100%;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 420px;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      text-align: center;
     }
 
     h1 {
-      margin-bottom: 15px;
-      color: #6a11cb;
+      margin-top: 0;
+      color: #000;
     }
 
-    p {
-      font-size: 1.05em;
-      margin-bottom: 25px;
+    .descricao {
+      font-size: 15px;
+      color: #333;
+      margin: 15px 0;
     }
 
-    button {
-      width: 100%;
-      padding: 15px;
-      margin: 10px 0;
-      font-size: 17px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background: #6a11cb;
+    .preco {
+      font-weight: bold;
+      margin: 10px 0 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #7b2cbf;
       color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
     }
 
-    button:hover {
-      background: #5311a8;
+    .btn:hover {
+      background: #5a189a;
+    }
+
+    .pix {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .pix strong {
+      display: block;
+      margin-top: 8px;
+      font-size: 15px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="card">
     <h1>📚 Livros Motivacionais</h1>
 
-    <p>
-      Aqui você encontra livros e textos para fortalecer a mente
-      e continuar mesmo nos dias difíceis.
-    </p>
+    <div class="descricao">
+      📖 Aqui você encontra textos e livros motivacionais que inspiram,
+      elevam sua autoestima e ajudam a superar desafios da vida. ✨
+    </div>
 
-    <button onclick="window.location.href='livro1.html'">
-      Acessar Livro 1
-    </button>
+    <div class="preco">Apenas 10 reais</div>
 
-    <button onclick="window.location.href='livro2.html'">
-      Acessar Livro 2
-    </button>
+    <a class="btn" href="livro1.html">Acessar Livro 1</a>
+
+    <div class="pix">
+      💰 <strong>PAGAMENTO VIA PIX</strong>
+      Chave PIX: <strong>1299107-8958</strong>
+      <br><br>
+      Após o pagamento, envie o comprovante para receber a senha.
+    </div>
   </div>
 
 </body>
