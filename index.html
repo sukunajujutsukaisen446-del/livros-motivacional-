@@ -7,65 +7,44 @@
 
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background: #f3f0ff;
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f2f2f2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      padding: 0;
     }
 
     .card {
+      max-width: 500px;
+      margin: 80px auto;
       background: white;
-      width: 90%;
-      max-width: 420px;
-      padding: 30px 25px;
+      padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
       text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
 
     h1 {
-      margin-top: 0;
-      color: #000;
+      color: #5a189a;
     }
 
-    .descricao {
-      font-size: 15px;
+    p {
       color: #333;
-      margin: 15px 0;
-    }
-
-    .preco {
-      font-weight: bold;
-      margin: 10px 0 20px;
     }
 
     .btn {
       display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
       background: #7b2cbf;
       color: white;
-      padding: 12px 25px;
-      border-radius: 8px;
       text-decoration: none;
+      border-radius: 8px;
       font-size: 16px;
-    }
-
-    .btn:hover {
-      background: #5a189a;
     }
 
     .pix {
       margin-top: 30px;
       font-size: 14px;
-      color: #333;
-    }
-
-    .pix strong {
-      display: block;
-      margin-top: 8px;
-      font-size: 15px;
     }
   </style>
 </head>
@@ -75,20 +54,18 @@
   <div class="card">
     <h1>📚 Livros Motivacionais</h1>
 
-    <div class="descricao">
-      📖 Aqui você encontra textos e livros motivacionais que inspiram,
-      elevam sua autoestima e ajudam a superar desafios da vida. ✨
-    </div>
+    <p>
+      ✨ Aqui você encontra textos e livros motivacionais que inspiram,
+      elevam sua autoestima e ajudam a superar desafios da vida.
+    </p>
 
-    <div class="preco">Apenas 10 reais</div>
+    <p><strong>Apenas 10 reais</strong></p>
 
     <a class="btn" href="livro1.html">Acessar Livro 1</a>
 
     <div class="pix">
-      💰 <strong>PAGAMENTO VIA PIX</strong>
-      Chave PIX: <strong>1299107-8958</strong>
-      <br><br>
-      Após o pagamento, envie o comprovante para receber a senha.
+      <p><strong>Pagamento via PIX</strong></p>
+      <p>Chave PIX: <strong>1299107-8958</strong></p>
     </div>
   </div>
 
