@@ -3,71 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <title>Livros Motivacionais</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f3f0ff;
       margin: 0;
       padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2d89ef, #1b5fc1);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
     .card {
-      max-width: 500px;
-      margin: 80px auto;
       background: white;
+      border-radius: 14px;
       padding: 30px;
-      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
       text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
 
-    h1 {
-      color: #5a189a;
+    .card h2 {
+      margin-top: 0;
+      font-size: 24px;
     }
 
-    p {
-      color: #333;
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
     }
 
     .btn {
       display: inline-block;
       margin-top: 20px;
-      padding: 12px 25px;
-      background: #7b2cbf;
-      color: white;
+      padding: 14px 32px;
+      border-radius: 12px;
       text-decoration: none;
-      border-radius: 8px;
-      font-size: 16px;
+      font-size: 17px;
+      font-weight: bold;
+      color: white;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    .pix {
-      margin-top: 30px;
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .btn-livro1 {
+      background: #dc3545;
+    }
+
+    .btn-livro2 {
+      background: #2d89ef;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #e9ecef;
       font-size: 14px;
+      color: #666;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="card">
+  <header>
     <h1>📚 Livros Motivacionais</h1>
+    <p>Leitura que acolhe, fortalece e inspira você</p>
+  </header>
 
-    <p>
-      ✨ Aqui você encontra textos e livros motivacionais que inspiram,
-      elevam sua autoestima e ajudam a superar desafios da vida.
-    </p>
+  <div class="container">
 
-    <p><strong>Apenas 10 reais</strong></p>
+    <div class="card">
+      <h2>📘 Livro 1 — Disciplina e Superação</h2>
+      <p>
+        Um livro sobre constância, esforço diário e crescimento pessoal.
+        <br>
+        <strong>Acesso protegido por senha.</strong>
+      </p>
 
-    <a class="btn" href="livro1.html">Acessar Livro 1</a>
-
-    <div class="pix">
-      <p><strong>Pagamento via PIX</strong></p>
-      <p>Chave PIX: <strong>1299107-8958</strong></p>
+      <a href="livro1.html" class="btn btn-livro1">
+        🔒 Acessar Livro 1
+      </a>
     </div>
+
+    <div class="card">
+      <h2>💙 Livro 2 — Você Não Está Sozinho</h2>
+      <p>
+        Um livro de acolhimento para quem enfrenta dias difíceis.
+        <br>
+        Leitura sensível, humana e necessária.
+      </p>
+
+      <a href="livro2-allyson-privado-1299.html" class="btn btn-livro2">
+        🤍 Acessar Livro 2
+      </a>
+    </div>
+
   </div>
+
+  <footer>
+    © 2026 — Allyson • Projeto Livros Motivacionais
+  </footer>
 
 </body>
 </html>
