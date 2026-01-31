@@ -53,23 +53,45 @@
 <body>
 
   <div class="card">
-    <h2>🔒 Livro 2 Protegido</h2>
-    <p>Digite a senha para acessar</p>
+   <h2>🔒 Livro 2 — Acesso Protegido</h2>
 
-    <input type="password" id="senha" placeholder="Senha">
-    <button onclick="verificar()">Entrar</button>
-  </div>
+<input
+  type="password"
+  id="senha"
+  placeholder="Digite a senha"
+  style="padding:10px; font-size:16px; border-radius:8px; width:220px;"
+>
 
-  <script>
-    function verificar() {
-      const senha = document.getElementById("senha").value;
+<br><br>
 
-      if (senha === "LIVRO2-1299") {
-        window.location.href = "livro2-secreto.html";
-      } else {
-        alert("❌ Senha incorreta");
-      }
-    }
+<button onclick="verificarSenha()"
+style="
+  padding:10px 20px;
+  font-size:16px;
+  background:#6c63ff;
+  color:white;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+">
+  Entrar
+</button>
+
+<p id="mensagem" style="color:red; margin-top:10px;"></p>
+
+<script>
+function verificarSenha() {
+  const senha = document.getElementById("senha").value;
+  const mensagem = document.getElementById("mensagem");
+
+  if (senha === "1299") {
+    window.location.href = "livro2-secreto.html";
+  } else {
+    mensagem.innerText = "❌ Senha incorreta";
+  }
+}
+</script>
+
   </script>
 
 </body>
