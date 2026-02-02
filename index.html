@@ -163,6 +163,88 @@
   <footer>
     © 2026 — Allyson • Projeto Livros Motivacionais
   </footer>
+  <!-- BLOCO DE CONVERSÃO / VENDA -->
+<div style="
+  margin-top:60px;
+  padding:30px;
+  background:#ffffff;
+  border-radius:14px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  text-align:center;
+">
+
+  <h2>📘 Um livro que pode mudar seus dias</h2>
+  <p style="font-size:18px; margin-bottom:10px;">
+    Leitura curta, direta e feita para quem precisa de força agora.
+  </p>
+
+  <!-- AVALIAÇÃO -->
+  <div style="font-size:22px; margin:15px 0;">
+    ⭐⭐⭐⭐⭐
+    <p style="font-size:14px; color:#666;">Avaliado por leitores</p>
+  </div>
+
+  <!-- O QUE O LIVRO FAZ -->
+  <p style="font-size:17px; line-height:1.6;">
+    Este livro ajuda você a organizar seus pensamentos, aliviar o peso
+    emocional e encontrar motivação para continuar, mesmo nos dias difíceis.
+  </p>
+
+  <!-- BOTÃO PAGAMENTO -->
+  <button onclick="mostrarPix()" style="
+    margin-top:20px;
+    padding:14px 28px;
+    font-size:18px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    background:#6c63ff;
+    color:white;
+  ">
+    💳 Comprar agora
+  </button>
+
+  <!-- PIX -->
+  <div id="pixBox" style="display:none; margin-top:25px;">
+    <p style="font-size:17px;"><strong>Chave PIX:</strong></p>
+    <p style="font-size:18px;">📌 SUA-CHAVE-PIX-AQUI</p>
+
+    <p style="margin-top:15px;">Você deseja continuar?</p>
+
+    <button onclick="aceitou()" style="padding:8px 20px; margin-right:10px;">
+      ✅ Sim
+    </button>
+
+    <button onclick="mostrarOferta()" style="padding:8px 20px;">
+      ❌ Não
+    </button>
+  </div>
+
+  <!-- OFERTA EXCLUSIVA -->
+  <div id="ofertaBox" style="display:none; margin-top:25px;">
+    <h3>🔥 Oferta exclusiva pra você</h3>
+    <p style="font-size:18px;">
+      Somente agora: <strong>apenas 5 reais ❤️🔥</strong>
+    </p>
+    <p>Essa oferta não aparecerá novamente.</p>
+  </div>
+
+</div>
+
+<script>
+function mostrarPix() {
+  document.getElementById("pixBox").style.display = "block";
+}
+
+function mostrarOferta() {
+  document.getElementById("ofertaBox").style.display = "block";
+}
+
+function aceitou() {
+  alert("Obrigado por apoiar o projeto ❤️");
+}
+</script>
+
 
 </body>
 </html>
