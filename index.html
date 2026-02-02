@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Livros Motivacionais</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: #f4f6f8;
       color: #333;
@@ -30,219 +28,142 @@
     header p {
       margin-top: 10px;
       font-size: 18px;
-      opacity: 0.95;
     }
 
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 20px;
     }
 
     .card {
       background: white;
+      padding: 25px;
       border-radius: 14px;
-      padding: 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-      text-align: center;
+      margin-top: 30px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     }
 
-    .card h2 {
-      margin-top: 0;
-      font-size: 24px;
-    }
-
-    .card p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .btn {
+    .price {
       display: inline-block;
-      margin-top: 20px;
-      padding: 14px 32px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: bold;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: linear-gradient(90deg, #ff4d4d, #ff7a18);
       color: white;
-      transition: transform 0.2s, box-shadow 0.2s;
+      font-weight: bold;
+      border-radius: 12px;
+      font-size: 18px;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 22px;
+      font-size: 16px;
+      margin-top: 15px;
     }
 
-    .btn-livro1 {
-      background: #dc3545;
-    }
-
-    .btn-livro2 {
+    .buy {
       background: #2d89ef;
+      color: white;
+    }
+
+    .yes {
+      background: #28a745;
+      color: white;
+    }
+
+    .no {
+      background: #dc3545;
+      color: white;
+    }
+
+    .stars {
+      font-size: 22px;
+      color: #f4b400;
+      margin-top: 10px;
     }
 
     footer {
       text-align: center;
-      padding: 25px;
-      background: #e9ecef;
+      padding: 20px;
+      margin-top: 40px;
+      color: #777;
       font-size: 14px;
-      color: #666;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>📚 Livros Motivacionais</h1>
-    <p>Leitura que acolhe, fortalece e inspira você</p>
-  </header>
+<header>
+  <h1>Livros Motivacionais</h1>
+  <p>Palavras que fortalecem a mente e o coração</p>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <div class="card">
-      <h2>📘 Livro 1 — Disciplina e Superação</h2>
-      <p>
-        Um livro sobre constância, esforço diário e crescimento pessoal.
-        <br>
-        <strong>Acesso protegido por senha.</strong>
-      </p>
-
-      <a href="livro1.html" class="btn btn-livro1">
-        🔒 Acessar Livro 1
-      </a>
-    </div>
-
-    <div class="card">
-      <h2>💙 Livro 2 — Você Não Está Sozinho</h2>
-      <p>
-        Um livro de acolhimento para quem enfrenta dias difíceis.
-        <br>
-        Leitura sensível, humana e necessária.
-      </p>
-
-      <a href="livro2-allyson-privado-1299.html" class="btn btn-livro2">
-        🤍 Acessar Livro 2
-      </a>
-    </div>
-
-  </div>
-<div style="
-  margin-top:50px;
-  padding:30px;
-  background:#ffffff;
-  border-radius:14px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-">
-  <div style="
-  margin-top:12px;
-  font-size:19px;
-  font-weight:bold;
-  color:#fff;
-  background:linear-gradient(90deg, #ff4d6d, #ff7a18);
-  padding:10px 16px;
-  border-radius:12px;
-  display:inline-block;
-">
-  apenas 10 reais ❤️🔥
-</div>
-
-  <h2>Quem sou eu</h2>
-
-  <p style="font-size:17px; line-height:1.6;">
-    Me chamo <strong>Allyson</strong> e criei esse projeto para ajudar pessoas que estão passando por momentos difíceis.
-  </p>
-
-  <p style="font-size:17px; line-height:1.6;">
-    Esses livros foram escritos com carinho, pensando em quem precisa de força, esperança e motivação para continuar.
-  </p>
-</div>
-
-  <footer>
-    © 2026 — Allyson • Projeto Livros Motivacionais
-  </footer>
-  <!-- BLOCO DE CONVERSÃO / VENDA -->
-<div style="
-  margin-top:60px;
-  padding:30px;
-  background:#ffffff;
-  border-radius:14px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-  text-align:center;
-">
-
-  <h2>📘 Um livro que pode mudar seus dias</h2>
-  <p style="font-size:18px; margin-bottom:10px;">
-    Leitura curta, direta e feita para quem precisa de força agora.
-  </p>
-
-  <!-- AVALIAÇÃO -->
-  <div style="font-size:22px; margin:15px 0;">
-    ⭐⭐⭐⭐⭐
-    <p style="font-size:14px; color:#666;">Avaliado por leitores</p>
-  </div>
-
-  <!-- O QUE O LIVRO FAZ -->
-  <p style="font-size:17px; line-height:1.6;">
-    Este livro ajuda você a organizar seus pensamentos, aliviar o peso
-    emocional e encontrar motivação para continuar, mesmo nos dias difíceis.
-  </p>
-
-  <!-- BOTÃO PAGAMENTO -->
-  <button onclick="mostrarPix()" style="
-    margin-top:20px;
-    padding:14px 28px;
-    font-size:18px;
-    border:none;
-    border-radius:12px;
-    cursor:pointer;
-    background:#6c63ff;
-    color:white;
-  ">
-    💳 Comprar agora
-  </button>
-
-  <!-- PIX -->
-  <div id="pixBox" style="display:none; margin-top:25px;">
-    <p style="font-size:17px;"><strong>Chave PIX:</strong></p>
-    <p style="font-size:18px;">📌 SUA-CHAVE-PIX-AQUI</p>
-
-    <p style="margin-top:15px;">Você deseja continuar?</p>
-
-    <button onclick="aceitou()" style="padding:8px 20px; margin-right:10px;">
-      ✅ Sim
-    </button>
-
-    <button onclick="mostrarOferta()" style="padding:8px 20px;">
-      ❌ Não
-    </button>
-  </div>
-
-  <!-- OFERTA EXCLUSIVA -->
-  <div id="ofertaBox" style="display:none; margin-top:25px;">
-    <h3>🔥 Oferta exclusiva pra você</h3>
-    <p style="font-size:18px;">
-      Somente agora: <strong>apenas 5 reais ❤️🔥</strong>
+  <!-- NÃO MEXE NOS LIVROS 1 E 2 -->
+  <div class="card">
+    <h2>📘 Livro Motivacional Especial</h2>
+    <p>
+      Um livro feito para quem está cansado, desanimado ou precisando
+      de força para continuar. Cada página traz conforto, esperança e motivação.
     </p>
-    <p>Essa oferta não aparecerá novamente.</p>
+
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+
+    <p>
+      ✔ Aumenta a motivação<br>
+      ✔ Fortalece a mente<br>
+      ✔ Ajuda em momentos difíceis
+    </p>
+
+    <div class="price">apenas 10 reais ❤️🔥</div>
+
+    <br>
+    <button class="buy" onclick="mostrarPix()">💳 Comprar agora</button>
+
+    <!-- PIX -->
+    <div id="pixBox" style="display:none; margin-top:20px;">
+      <p><strong>Chave Pix:</strong></p>
+      <p>sukuna.jujutsu.kaisen446@gmail.com</p>
+
+      <p>Deseja continuar?</p>
+
+      <button class="yes" onclick="aceitou()">Sim</button>
+      <button class="no" onclick="mostrarOferta()">Não</button>
+    </div>
+
+    <!-- OFERTA -->
+    <div id="ofertaBox" style="display:none; margin-top:25px;">
+      <h3>🔥 Oferta exclusiva</h3>
+      <p style="font-size:18px;">
+        Somente agora: <strong>apenas 5 reais ❤️</strong>
+      </p>
+    </div>
+
   </div>
 
 </div>
+
+<footer>
+  © 2026 – Allyson • Projeto Livros Motivacionais
+</footer>
 
 <script>
-function mostrarPix() {
-  document.getElementById("pixBox").style.display = "block";
-}
+  function mostrarPix() {
+    document.getElementById("pixBox").style.display = "block";
+  }
 
-function mostrarOferta() {
-  document.getElementById("ofertaBox").style.display = "block";
-}
+  function mostrarOferta() {
+    document.getElementById("ofertaBox").style.display = "block";
+  }
 
-function aceitou() {
-  alert("Obrigado por apoiar o projeto ❤️");
-}
+  function aceitou() {
+    alert("Obrigado por apoiar o projeto ❤️");
+  }
 </script>
 
 </body>
