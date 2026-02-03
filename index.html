@@ -149,7 +149,54 @@ footer{
   </div>
 
 </div>
+<!-- AVALIAÇÃO + COMPRA -->
+<div class="pay" style="max-width:900px;margin:40px auto;background:#fff;padding:30px;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.08);text-align:center;">
 
+  <h2>🌟 Avalie este projeto</h2>
+  <p>Sua avaliação ajuda esse projeto a alcançar mais pessoas 💙</p>
+
+  <!-- ESTRELAS CLICÁVEIS -->
+  <div id="stars" style="font-size:32px;cursor:pointer;">
+    <span onclick="avaliar(1)">⭐</span>
+    <span onclick="avaliar(2)">⭐</span>
+    <span onclick="avaliar(3)">⭐</span>
+    <span onclick="avaliar(4)">⭐</span>
+    <span onclick="avaliar(5)">⭐</span>
+  </div>
+
+  <p id="msgAvaliacao" style="margin-top:10px;font-weight:bold;"></p>
+
+  <hr style="margin:30px 0;">
+
+  <h2>📘 Apoie o projeto</h2>
+  <p>Tenha acesso a um conteúdo feito para fortalecer, acolher e motivar.</p>
+
+  <!-- BOTÃO DE COMPRA -->
+  <button onclick="mostrarOferta()" style="padding:14px 32px;border:none;border-radius:30px;background:#e63946;color:#fff;font-size:18px;font-weight:bold;cursor:pointer;">
+    💳 Comprar livro
+  </button>
+
+  <!-- OFERTA -->
+  <div id="oferta" style="display:none;margin-top:25px;">
+    <h3>🔥 Oferta especial para você</h3>
+    <p style="font-size:20px;">
+      Apenas <strong>5 reais ❤️🔥</strong>
+    </p>
+    <p>Aproveite agora. Oferta exclusiva.</p>
+  </div>
+
+</div>
+
+<script>
+function avaliar(nota){
+  document.getElementById("msgAvaliacao").innerText =
+    "Obrigado pela sua avaliação de " + nota + " estrelas ⭐💙";
+}
+
+function mostrarOferta(){
+  document.getElementById("oferta").style.display = "block";
+}
+</script>
 <footer>
   © 2026 — Allyson • Projeto Livros Motivacionais
 </footer>
