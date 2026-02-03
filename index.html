@@ -88,6 +88,20 @@ footer{
 }
 </style>
 </head>
+<script>
+function avaliar(nota) {
+  const msg = document.getElementById("mensagemAvaliacao");
+  const feedback = document.getElementById("feedback");
+
+  if (nota === 5) {
+    msg.innerHTML = "💙 Obrigado pela avaliação! Isso ajuda muito o projeto.";
+    feedback.style.display = "none";
+  } else {
+    msg.innerHTML = "🙏 Obrigado! Sua opinião é muito importante.";
+    feedback.style.display = "block";
+  }
+}
+</script>
 
 <body>
 
@@ -117,8 +131,26 @@ footer{
     <h2>✨ Transforme seus dias com uma leitura que cura</h2>
     <p>Esses livros ajudam você a recuperar forças, organizar a mente e seguir em frente, mesmo nos dias difíceis.</p>
 
-    <div class="stars">⭐⭐⭐⭐⭐</div>
-    <p><strong>Avaliação 5 estrelas por leitores que precisavam de apoio.</strong></p>
+    <div style="margin-top:15px;">
+  <div id="stars" style="font-size:28px;cursor:pointer;">
+    <span onclick="avaliar(1)">⭐</span>
+    <span onclick="avaliar(2)">⭐</span>
+    <span onclick="avaliar(3)">⭐</span>
+    <span onclick="avaliar(4)">⭐</span>
+    <span onclick="avaliar(5)">⭐</span>
+  </div>
+
+  <p id="mensagemAvaliacao" style="margin-top:12px;font-weight:bold;"></p>
+
+  <!-- CAMPO DE FEEDBACK -->
+  <div id="feedback" style="display:none;margin-top:10px;">
+    <textarea
+      placeholder="Conte pra mim o que posso melhorar 🙏"
+      style="width:100%;max-width:400px;height:90px;padding:10px;border-radius:8px;border:1px solid #ccc;">
+    </textarea>
+  </div>
+</div>
+
 
     <p style="font-size:18px;background:#ff4d6d;color:#fff;display:inline-block;padding:8px 16px;border-radius:20px;">
       apenas 10 reais ❤️🔥
