@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Livro 4 — Acredite em Você</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#f3f5f7;
+margin:0;
+line-height:1.7;
+color:#222;
+}
+
+header{
+background:linear-gradient(135deg,#00b09b,#96c93d);
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+header h1{
+margin:0;
+font-size:32px;
+}
+
+main{
+max-width:900px;
+margin:auto;
+background:white;
+padding:30px;
+}
+
+h2{
+color:#00a884;
+margin-top:40px;
+}
+
+.capitulo{
+margin-bottom:30px;
+}
+
+footer{
+text-align:center;
+background:#00a884;
+color:white;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Acredite em Você</h1>
+<p>Livro 4 — Autoestima e crescimento pessoal</p>
+</header>
+
+<main>
+
+<div class="capitulo">
+<h2>Capítulo 1 — O começo da mudança</h2>
+<p>
+Toda mudança começa dentro da mente. Muitas vezes você pensa
+que não consegue, mas isso é apenas um pensamento.
+A verdade é que todos aprendem com o tempo.
+Pequenas decisões criam grandes mudanças.
+Não espere o momento perfeito.
+Comece com o primeiro passo.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 2 — Confiança em si</h2>
+<p>
+A confiança não nasce pronta.
+Ela cresce com as experiências da vida.
+Cada desafio enfrentado fortalece sua mente.
+Mesmo quando você erra, aprende algo.
+O importante é continuar tentando.
+Assim a confiança se constrói.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 3 — Aceitar quem você é</h2>
+<p>
+Aceitar a si mesmo é um passo poderoso.
+Todos têm defeitos e qualidades.
+Quando você aceita sua história,
+fica mais fácil melhorar o futuro.
+A mudança começa com a aceitação.
+E a evolução começa com a coragem.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 4 — Persistência</h2>
+<p>
+Persistir significa continuar.
+Mesmo quando a caminhada é difícil.
+Muitos desistem antes da vitória.
+Mas quem continua aprende mais.
+Cada tentativa traz experiência.
+E experiência cria crescimento.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 5 — Aprender com erros</h2>
+<p>
+Erros fazem parte da vida.
+Eles não significam fracasso.
+Eles mostram que você tentou.
+Cada erro ensina algo novo.
+Quando você aprende com eles,
+se torna uma pessoa mais forte.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 6 — Pensamentos positivos</h2>
+<p>
+Pensamentos influenciam sentimentos.
+Quando você muda a forma de pensar,
+também muda a forma de sentir.
+Pensamentos negativos aparecem.
+Mas eles não precisam dominar.
+Treinar a mente faz diferença.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 7 — Esforço diário</h2>
+<p>
+Grandes conquistas levam tempo.
+Elas nascem de pequenas atitudes.
+O esforço diário cria progresso.
+Mesmo que pareça pouco.
+Cada dia conta.
+Cada passo importa.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 8 — Recomeçar</h2>
+<p>
+Recomeçar pode assustar.
+Mas também traz novas oportunidades.
+Quando algo termina,
+algo novo pode começar.
+Cada recomeço traz aprendizado.
+E novos caminhos surgem.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 9 — Pequenas vitórias</h2>
+<p>
+Valorize cada pequena conquista.
+Mesmo as menores.
+Elas mostram que você avançou.
+Grandes resultados levam tempo.
+Tudo começa com pequenos passos.
+Celebre cada progresso.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 10 — Crescimento</h2>
+<p>
+Crescer é evoluir aos poucos.
+Não precisa ser rápido.
+O importante é continuar melhorando.
+Aprendendo todos os dias.
+Quem cresce diariamente
+constrói um futuro melhor.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 11 — Autoconhecimento</h2>
+<p>
+Conhecer a si mesmo é poderoso.
+Quando você entende seus sentimentos,
+fica mais fácil tomar decisões.
+Você aprende sobre seus limites.
+E também descobre sua força.
+Isso fortalece sua vida.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 12 — Força interior</h2>
+<p>
+Dentro de você existe força.
+Mesmo que às vezes pareça escondida.
+Momentos difíceis revelam isso.
+Eles mostram sua capacidade.
+Quando você continua tentando,
+descobre o quanto é forte.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 13 — Superar dúvidas</h2>
+<p>
+A dúvida aparece para todos.
+Ela faz parte da jornada.
+Mas ela não precisa parar você.
+Continuar agindo cria confiança.
+A ação reduz o medo.
+E fortalece sua coragem.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 14 — Construindo confiança</h2>
+<p>
+Confiança nasce da experiência.
+Cada desafio vencido fortalece você.
+Com o tempo tudo fica mais claro.
+Você aprende mais sobre si.
+E descobre novas capacidades.
+Assim a confiança cresce.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 15 — Paciência</h2>
+<p>
+Nem tudo acontece rápido.
+Algumas coisas precisam de tempo.
+A paciência ajuda no processo.
+Ela permite crescimento verdadeiro.
+Quem aprende a esperar
+consegue avançar melhor.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 16 — Esperança</h2>
+<p>
+A esperança mantém as pessoas caminhando.
+Mesmo em momentos difíceis.
+Ela dá força para continuar.
+Quando tudo parece difícil.
+A esperança lembra
+que o futuro ainda existe.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 17 — Criar oportunidades</h2>
+<p>
+Oportunidades nem sempre aparecem.
+Às vezes precisam ser criadas.
+Quando você age e tenta,
+novos caminhos surgem.
+Movimento gera mudança.
+E mudança gera crescimento.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 18 — Coragem</h2>
+<p>
+Coragem não é ausência de medo.
+É agir mesmo sentindo medo.
+Muitas conquistas começam assim.
+Com um passo de coragem.
+Quem tenta aprende.
+Quem aprende evolui.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 19 — Construindo o futuro</h2>
+<p>
+O futuro começa hoje.
+Cada decisão influencia amanhã.
+Pequenas escolhas mudam caminhos.
+Por isso escolha avançar.
+Mesmo que devagar.
+O importante é continuar.
+</p>
+</div>
+
+<div class="capitulo">
+<h2>Capítulo 20 — Continue</h2>
+<p>
+A jornada da vida continua.
+Sempre haverá novos desafios.
+E também novas conquistas.
+O importante é não desistir.
+Continue caminhando.
+Seu futuro ainda está sendo escrito.
+</p>
+</div>
+
+</main>
+
+<footer>
+© 2026 — Allyson | Livro 3
+</footer>
+
+</body>
+</html>
