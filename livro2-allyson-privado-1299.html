@@ -108,5 +108,36 @@ function verificarSenha() {
     </button>
   </a>
 </div>
+    <div style="text-align:center; margin-top:40px;">
+<button onclick="irParaLivro3()" style="
+padding:15px 30px;
+font-size:18px;
+background-color:#4CAF50;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+">
+Ir para o Livro 3 🔒
+</button>
+</div>
+
+<script>
+function irParaLivro3() {
+
+let senha = prompt("Digite a senha para acessar o Livro 3:");
+
+if (senha === "3livroo") {
+
+window.location.href = "livro3.html";
+
+} else {
+
+alert("Senha incorreta!");
+
+}
+
+}
+</script>
 </body>
 </html>
